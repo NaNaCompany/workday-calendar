@@ -1,0 +1,59 @@
+{
+  "slug": "workday-calendar",
+  "url": "https://nanalab.kr/workday-calendar/",
+  "languages": [
+    "ko",
+    "en",
+    "es",
+    "zh",
+    "ja",
+    "de"
+  ],
+  "locales": {
+    "ko": {
+      "name": "날짜 근무일 계산기",
+      "description": "제외 요일과 휴일을 직접 정해 기간별 근무일 수와 지정 근무일만큼 전후 날짜를 계산하세요.",
+      "image_alt": "날짜 근무일 계산기"
+    },
+    "en": {
+      "name": "Workday Calendar",
+      "description": "Set excluded weekdays and holidays to count workdays in a period or move a date forward or backward by workdays.",
+      "image_alt": "Workday Calendar"
+    },
+    "es": {
+      "name": "Calendario laboral",
+      "description": "Configura días semanales excluidos y festivos para contar días laborables o adelantar y retroceder fechas por días de trabajo.",
+      "image_alt": "Calendario laboral"
+    },
+    "zh": {
+      "name": "工作日计算器",
+      "description": "自行设置排除的星期与节假日，计算区间工作日数或按工作日向前、向后推算日期。",
+      "image_alt": "工作日计算器"
+    },
+    "ja": {
+      "name": "営業日カレンダー",
+      "description": "除外する曜日と休日を設定し、期間内の営業日数や指定営業日数だけ前後の日付を計算できます。",
+      "image_alt": "営業日カレンダー"
+    },
+    "de": {
+      "name": "Arbeitstage-Kalender",
+      "description": "Legen Sie ausgeschlossene Wochentage und Feiertage fest, um Arbeitstage zu zählen oder ein Datum um Arbeitstage zu verschieben.",
+      "image_alt": "Arbeitstage-Kalender"
+    },
+    "fr": {
+      "name": "Calculateur de jours ouvrés",
+      "description": "Définissez les jours de semaine et dates à exclure pour compter les jours ouvrés ou décaler une date en jours ouvrés.",
+      "image_alt": "Calculateur de jours ouvrés"
+    },
+    "pt": {
+      "name": "Calculadora de dias úteis",
+      "description": "Defina dias da semana excluídos e feriados para contar dias úteis ou avançar e retroceder uma data em dias úteis.",
+      "image_alt": "Calculadora de dias úteis"
+    },
+    "ru": {
+      "name": "Калькулятор рабочих дней",
+      "description": "Задавайте исключённые дни недели и праздники, чтобы считать рабочие дни за период или сдвигать дату на рабочие дни.",
+      "image_alt": "Калькулятор рабочих дней"
+    }
+  }
+}

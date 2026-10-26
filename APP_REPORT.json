@@ -1,0 +1,14 @@
+{
+  "ideaId":"W016",
+  "slug":"workday-calendar",
+  "title":"날짜 근무일 계산기",
+  "ready":true,
+  "summary":"사용자 지정 제외 요일·휴일로 근무일 집계와 ±5,000 근무일 날짜 역산. 여섯 언어 전체 지원.",
+  "features":["시작·종료일 포함 선택","제외 요일 직접 설정","휴일 500개 직접 입력·중복 제거","앞뒤 근무일 이동","전체 날짜 CSV 내보내기","결과 복사","6개 언어 경로·수동 전환"],
+  "languages":["ko","en","es","zh","ja","de"],
+  "languageRoutes":{"ko":"/","en":"/en/","es":"/es/","zh":"/zh/","ja":"/ja/","de":"/de/"},
+  "tests":[{"name":"node --check dist/app.js","pass":true},{"name":"20 date, exclusion, shift, validation and six-locale fixtures","pass":true}],
+  "limitations":["공식 공휴일 데이터 미내장. 사용자 직접 입력.","1900–2100년·기간 36,600일·이동 ±5,000 근무일.","화면 표 500행 미리보기. CSV는 전체.","브라우저 시각·클립보드·다운로드 QA는 미수행."],
+  "sources":["https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date-objects"],
+  "entry":"dist/index.html"
+}

@@ -1,0 +1,8 @@
+export const DAY=86400000;
+export function parseDate(s){if(!/^\d{4}-\d{2}-\d{2}$/.test(s))throw Error('date');let [y,m,d]=s.split('-').map(Number),t=Date.UTC(y,m-1,d);if(y<1900||y>2100||new Date(t).toISOString().slice(0,10)!==s)throw Error('date');return t;}
+export const iso=t=>new Date(t).toISOString().slice(0,10);
+export function holidays(text){if(text.length>12000)throw Error('holidays');let a=text.trim()?text.trim().split(/[\s,;]+/):[];if(a.length>500)throw Error('holidays');return new Set(a.map(s=>iso(parseDate(s))));}
+export function weekend(values){let a=[...new Set(values.map(Number))];if(a.some(v=>!Number.isInteger(v)||v<0||v>6)||a.length===7)throw Error('weekend');return new Set(a);}
+export function kind(t,w,h){return w.has(new Date(t).getUTCDay())?'weekend':h.has(iso(t))?'holiday':'work';}
+export function count(start,end,w,h,includeStart=true,includeEnd=true){let a=parseDate(start),b=parseDate(end);if(b<a||b-a>36600*DAY)throw Error('range');let rows=[],totals={work:0,weekend:0,holiday:0};for(let t=a;t<=b;t+=DAY){if((t===a&&!includeStart)||(t===b&&!includeEnd))continue;let status=kind(t,w,h);totals[status]++;rows.push({date:iso(t),day:new Date(t).getUTCDay(),status});}return {rows,totals};}
+export function shift(start,amount,w,h){let t=parseDate(start),n=Number(amount);if(!/^-?\d+$/.test(String(amount))||!Number.isInteger(n)||Math.abs(n)>5000)throw Error('amount');let left=Math.abs(n),direction=n<0?-1:1,steps=0;while(left){t+=direction*DAY;if(++steps>36600||t<parseDate('1900-01-01')||t>parseDate('2100-12-31'))throw Error('range');if(kind(t,w,h)==='work')left--;}return iso(t);}

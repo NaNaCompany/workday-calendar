@@ -1,0 +1,78 @@
+<!doctype html><html lang="zh"><head><base href="../"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>工作日计算器 · NaNa Lab</title><link rel="stylesheet" href="style.css"><script type="module" src="app.js"></script>
+<meta name="robots" content="index,follow">
+<meta name="description" content="自行设置排除的星期与节假日，计算区间工作日数或按工作日向前、向后推算日期。">
+<link rel="canonical" href="https://nanalab.kr/workday-calendar/zh/">
+<link rel="alternate" hreflang="ko" href="https://nanalab.kr/workday-calendar/">
+<link rel="alternate" hreflang="en" href="https://nanalab.kr/workday-calendar/en/">
+<link rel="alternate" hreflang="es" href="https://nanalab.kr/workday-calendar/es/">
+<link rel="alternate" hreflang="zh" href="https://nanalab.kr/workday-calendar/zh/">
+<link rel="alternate" hreflang="ja" href="https://nanalab.kr/workday-calendar/ja/">
+<link rel="alternate" hreflang="de" href="https://nanalab.kr/workday-calendar/de/">
+<link rel="alternate" hreflang="x-default" href="https://nanalab.kr/workday-calendar/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nanalab.kr/workday-calendar/zh/">
+<meta property="og:title" content="工作日计算器">
+<meta property="og:description" content="自行设置排除的星期与节假日，计算区间工作日数或按工作日向前、向后推算日期。">
+<meta property="og:image" content="https://nanalab.kr/workday-calendar/og/zh.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="工作日计算器">
+<meta name="twitter:description" content="自行设置排除的星期与节假日，计算区间工作日数或按工作日向前、向后推算日期。">
+<meta name="twitter:image" content="https://nanalab.kr/workday-calendar/og/zh.jpg">
+<link rel="stylesheet" href="public.css">
+
+<!-- NaNa publisher: AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9767176956440077"
+        crossorigin="anonymous"></script>
+<!-- /NaNa publisher: AdSense -->
+<!-- NaNa publisher: GTM -->
+<script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })
+            (window, document, 'script', 'dataLayer', 'GTM-NV2WWQXB');
+    </script>
+<!-- /NaNa publisher: GTM -->
+<!-- NaNa publisher: Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2ZYSF0173P"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-2ZYSF0173P');
+    </script>
+<!-- /NaNa publisher: Analytics -->
+</head><body>
+<!-- NaNa publisher: GTM fallback -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NV2WWQXB" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+<!-- /NaNa publisher: GTM fallback -->
+<header><span class="brand">NaNa / CALENDAR</span><div><label for="language" data-t="language"></label><select id="language" class="language"></select></div></header><main><div class="intro"><span class="eyebrow" data-t="tag"></span><h1 data-t="title"></h1><p data-t="desc"></p><button id="sample" class="secondary" data-t="sample"></button></div><div class="grid"><section class="panel"><h2 data-t="rangeTitle"></h2><div class="row"><div><label for="start" data-t="start"></label><input id="start" type="date" min="1900-01-01" max="2100-12-31"></div><div><label for="end" data-t="end"></label><input id="end" type="date" min="1900-01-01" max="2100-12-31"></div></div><div class="checks"><label><input id="includeStart" type="checkbox" checked><span data-t="includeStart"></span></label><label><input id="includeEnd" type="checkbox" checked><span data-t="includeEnd"></span></label></div><fieldset><legend data-t="weekends"></legend><div id="weekends" class="checks"></div></fieldset><label for="holidays" data-t="holidays"></label><textarea id="holidays" spellcheck="false" aria-describedby="holidayHint"></textarea><p id="holidayHint" class="hint" data-t="holidayHint"></p><button id="calculate" data-t="calculate"></button></section><section class="panel"><h2 data-t="shiftTitle"></h2><label for="base" data-t="base"></label><input id="base" type="date" min="1900-01-01" max="2100-12-31"><label for="amount" data-t="amount"></label><input id="amount" type="number" min="-5000" max="5000" step="1" aria-describedby="amountHint"><p id="amountHint" class="hint" data-t="amountHint"></p><button id="shift" data-t="shift"></button></section><section class="panel wide"><h2 data-t="result"></h2><p id="error" class="error" role="alert"></p><div id="result" aria-live="polite"></div><button id="copy" class="secondary" disabled data-t="copy"></button> <button id="download" class="secondary" disabled data-t="download"></button><p id="status" class="status" role="status"></p></section><section class="panel wide"><details><summary data-t="notes"></summary><p data-t="note"></p><a href="https://tc39.es/ecma262/multipage/numbers-and-dates.html#sec-date-objects" target="_blank" rel="noopener" data-t="source"></a></details></section></div></main><footer><span>NaNa Lab</span><a href="https://nanalab.kr/apps/">More Apps</a></footer>
+<!-- NaNa publisher: Cloudflare fallback -->
+<script>
+(function () {
+  function ensureBeacon() {
+    // Cloudflare may inject its beacon at the edge. Reuse that script when present.
+    if (document.querySelector('script[src*="static.cloudflareinsights.com/beacon.min.js"]')) return;
+    var beacon = document.createElement('script');
+    beacon.defer = true;
+    beacon.src = 'https://static.cloudflareinsights.com/beacon.min.js';
+    beacon.setAttribute('data-cf-beacon', JSON.stringify({token: '9f3423bb0d034d91bbe1a12afeff2429'}));
+    document.head.appendChild(beacon);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', ensureBeacon, {once: true});
+  else ensureBeacon();
+})();
+</script>
+<!-- /NaNa publisher: Cloudflare fallback -->
+</body></html>
